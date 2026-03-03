@@ -339,11 +339,12 @@ ol.talks-list {
   object-fit: contain;
   filter: grayscale(20%);
   /* slightly mute them so they aren't distracting */
-  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .uni-logo:hover {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 .copyright {
