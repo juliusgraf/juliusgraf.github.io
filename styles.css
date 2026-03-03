@@ -1,0 +1,397 @@
+/* ==========================================================================
+   CSS Variables for Theming (UC Berkeley Colors & Modern Typography)
+   ========================================================================== */
+:root {
+  /* UC Berkeley Colors */
+  --berkeley-blue: #003262;
+  --california-gold: #FDB515;
+  --founders-rock: #3B7EA1;
+  --medalist: #C4820E;
+
+  /* Grays & Backgrounds */
+  --text-main: #000000;
+  --text-muted: #000000;
+  --bg-main: #f8f9fa;
+  --bg-sidebar: #f8f9fa;
+  --divider-color: #eaeaea;
+  --link-color: var(--founders-rock);
+  --link-hover: var(--berkeley-blue);
+
+  /* Layout */
+  --sidebar-width: 320px;
+  --content-max-width: 800px;
+}
+
+/* ==========================================================================
+     Reset & Base Styles
+     ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Freight Sans Pro", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+     Layout Container
+     ========================================================================== */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+     Left Sidebar (Fixed)
+     ========================================================================== */
+.sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--divider-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align content to the top */
+  padding: 4rem 2rem 2rem 2rem;
+  /* Top padding to match right side spacing (4rem) */
+  overflow-y: auto;
+  /* In case screens are very short */
+  z-index: 10;
+}
+
+.profile-container {
+  text-align: center;
+  width: 100%;
+}
+
+.profile-image-container {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+  border: 0px solid var(--bg-main);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+}
+
+.institution {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: var(--text-muted);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  color: var(--bg-main);
+  background-color: var(--berkeley-blue);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+     Right Content Area
+     ========================================================================== */
+.content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 4rem 10%;
+  /* Responsive padding */
+  max-width: calc(var(--content-max-width) + 20%);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--divider-color);
+  margin: 1.5rem 0;
+}
+
+/* Select lists formatting */
+ul,
+ol {
+  margin-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+ol.pub-list,
+ol.talks-list {
+  list-style-position: outside;
+}
+
+/* Format for Education */
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  /* handles small screens inside this block */
+}
+
+.edu-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-details strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.edu-date {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Format for Publications */
+.section-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.pub-title a {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--berkeley-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-title-text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.pub-title a:hover {
+  color: #000000;
+}
+
+
+
+.pub-title-icon {
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 0rem;
+  transition: transform 0.2s ease;
+}
+
+.pub-title a:hover .pub-title-icon {
+  transform: translate(3px, -3px);
+
+}
+
+.pub-authors {
+  margin: 0.2rem 0;
+}
+
+.pub-venue {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.pub-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0rem;
+}
+
+.btn-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.btn-link:hover {
+  color: var(--california-gold);
+  text-decoration: none;
+}
+
+.btn-arxiv {
+  color: #B31B1B;
+  font-weight: 700;
+}
+
+/* Format for Talks */
+.talk-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-title {
+  color: var(--text-main);
+}
+
+.talk-venue,
+.talk-location,
+.talk-date {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+     Footer / Logos
+     ========================================================================== */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--divider-color);
+}
+
+.university-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.uni-logo {
+  max-height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  /* slightly mute them so they aren't distracting */
+  transition: filter 0.3s ease;
+}
+
+.uni-logo:hover {
+  filter: grayscale(0%);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.credit {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+     Responsive Design (Mobile Devices)
+     ========================================================================== */
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    /* Static position on mobile */
+    height: auto;
+    min-height: auto;
+    /* removed vh unit min height */
+    border-right: none;
+    border-bottom: 1px solid var(--divider-color);
+    padding: 3rem 1.5rem;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 2.5rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .edu-item {
+    flex-direction: column;
+  }
+
+  .edu-date {
+    margin-top: 0.2rem;
+  }
+
+  .university-logos {
+    gap: 1.5rem;
+  }
+}

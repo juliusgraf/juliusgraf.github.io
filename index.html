@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Julius Graf</title>
+  <meta name="description"
+    content="Personal academic website of Your Name, PhD Student in Industrial Engineering and Operations Research (IEOR) at UC Berkeley." />
+
+  <!-- Google Fonts: Open Sans for UC Berkeley standard web typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Fallback icons if kit fails -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Left Sidebar (Fixed) -->
+    <aside class="sidebar">
+      <div class="profile-container">
+        <h1 class="name">Julius Graf</h1>
+        <div class="profile-image-container">
+          <img src="./images/IMG_3444.jpeg" alt="Your Name" class="profile-img" />
+        </div>
+
+        <div class="social-links">
+          <!-- Replace "#" with your actual links -->
+          <a href="https://scholar.google.com/citations?user=ZHchrTUAAAAJ&hl=de&authuser=1"
+            target="https://scholar.google.com/citations?user=ZHchrTUAAAAJ&hl=de&authuser=1" title="Google Scholar"
+            class="social-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path
+                d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/julius-graf" target="https://www.linkedin.com/in/julius-graf"
+            title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/juliusgraf" target="https://github.com/juliusgraf" title="GitHub"
+            class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Content Area (Scrollable) -->
+    <main class="content">
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <p>
+          I am a Ph.D. student in the department of <a href="https://ieor.berkeley.edu/" target="_blank">Industrial
+            Engineering and Operations Research</a> at the University of California, Berkeley, where I am being
+          advised by <a href="https://mastrolia.ieor.berkeley.edu" tagret="_blank">Thibaut Mastrolia</a>. I hold both a
+          Bachelor's and a Master of Science in Engineering (Diplôme d'Ingénieur) from CentraleSupélec, following two
+          years of preparatory classes at Lycée Louis-le-Grand.
+        </p>
+        <p>
+          My research interests include financial mathematics, stochastic optimal control and financial microstructure.
+        </p>
+      </section>
+
+      <!-- Publications Section -->
+      <section id="publications" class="section">
+        <h2>Publications</h2>
+        <ol class="pub-list" style="padding-left: 20px;">
+          <li>
+            <div class="pub-title">
+              <a href="https://arxiv.org/abs/2601.17247" target="_blank">
+                <span class="pub-title-text">Learning Market Making with Closing Auctions</span>
+                <span class="pub-title-icon">&#8599;</span>
+              </a> (with Thibaut Mastrolia)
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Talks and Presentations Section -->
+      <section id="talks" class="section">
+        <h2>Talks and Presentations</h2>
+        <ol class="talks-list" style="padding-left: 20px;">
+          <li>
+            <div class="talk-item">
+              <div class="talk-title">Minisymposium on "Advances in Market Microstructure, Market Making, and
+                Competition", 13th World Congress of the Bachelier Finance Society, Bologna, Italy (June
+                2026)</div>
+            </div>
+          </li>
+          <li>
+            <div class="talk-item">
+              <div class="talk-title">Workshop on "Stochastic Control and Reinforcement Learning",
+                Marseille, France (July 2026)</div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Footer with University Logos and Education History -->
+      <footer class="footer">
+        <div class="university-history"
+          style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; width: 100%;">
+          <div class="uni-history-item" style="text-align: center; flex: 1; min-width: 200px;">
+            <img src="./images/UC-Berkeley-Symbol.png" alt="UC Berkeley Logo" class="uni-logo"
+              style="margin-bottom: 1rem;" />
+            <div class="uni-history-text" style="font-size: 0.9rem;">
+              <strong>UC Berkeley</strong><br>
+              2024 - Present
+            </div>
+          </div>
+          <div class="uni-history-item" style="text-align: center; flex: 1; min-width: 200px;">
+            <img src="./images/LogoCS-4.png" alt="CentraleSupelec Logo" class="uni-logo" style="margin-bottom: 1rem;" />
+            <div class="uni-history-text" style="font-size: 0.9rem;">
+              <strong>CentraleSupélec</strong><br>
+              2022 - 2024
+            </div>
+          </div>
+          <div class="uni-history-item" style="text-align: center; flex: 1; min-width: 200px;">
+            <img src="./images/LouisLeGrand.png" alt="Lycee Louis-le-Grand Logo" class="uni-logo"
+              style="margin-bottom: 1rem;" />
+            <div class="uni-history-text" style="font-size: 0.9rem;">
+              <strong>Lycée Louis-le-Grand</strong><br>
+              2020 - 2022
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+
+</html>
