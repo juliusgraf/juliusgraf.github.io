@@ -333,14 +333,35 @@ ol.talks-list {
   flex-wrap: wrap;
 }
 
+.university-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap;
+  /* Forces them to stay on one line on mobile */
+  overflow-x: auto;
+  /* Allows scrolling if the screen is incredibly tiny */
+}
+
+.uni-history-item {
+  text-align: center;
+  flex: 1 1 0;
+  /* Ensures they all take exactly equal space */
+  min-width: 0;
+  /* Prevents flex items from overflowing their container */
+}
+
 .uni-logo-link {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .uni-logo {
-  max-height: 60px;
-  max-width: 180px;
+  max-height: 50px;
+  /* slightly smaller max-height for mobile safety */
+  max-width: 100%;
   object-fit: contain;
   filter: grayscale(20%);
   display: block;
