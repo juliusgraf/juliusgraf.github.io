@@ -336,13 +336,12 @@ ol.talks-list {
 .university-history {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  /* Align tops instead of vertical center */
   gap: 1rem;
   width: 100%;
   flex-wrap: nowrap;
-  /* Forces them to stay on one line on mobile */
   overflow-x: auto;
-  /* Allows scrolling if the screen is incredibly tiny */
 }
 
 .uni-history-item {
@@ -354,7 +353,11 @@ ol.talks-list {
 }
 
 .uni-logo-link {
-  display: inline-block;
+  display: flex;
+  height: 60px;
+  /* Enforces equal bounding box for all variable sized logos */
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
 }
 
