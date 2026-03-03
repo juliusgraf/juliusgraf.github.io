@@ -356,7 +356,8 @@ ol.talks-list {
   display: flex;
   height: 60px;
   /* Enforces equal bounding box for all variable sized logos */
-  align-items: center;
+  align-items: flex-end;
+  /* Sit on a bottom baseline */
   justify-content: center;
   margin-bottom: 0.5rem;
 }
