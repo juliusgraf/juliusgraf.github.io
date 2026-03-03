@@ -336,11 +336,6 @@ ol.talks-list {
 .uni-logo-link {
   display: inline-block;
   margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.uni-logo-link:hover {
-  transform: scale(1.08);
 }
 
 .uni-logo {
@@ -348,12 +343,7 @@ ol.talks-list {
   max-width: 180px;
   object-fit: contain;
   filter: grayscale(20%);
-  transition: filter 0.3s ease;
   display: block;
-}
-
-.uni-logo-link:hover .uni-logo {
-  filter: grayscale(0%);
 }
 
 .copyright {
