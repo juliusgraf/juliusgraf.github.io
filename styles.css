@@ -412,7 +412,9 @@ ol.talks-list {
     margin-top: 0.2rem;
   }
 
-  .university-logos {
-    gap: 1.5rem;
+  .uni-history-text {
+    font-size: 0.75rem !important;
+    word-break: break-word;
+    line-height: 1.2;
   }
 }
