@@ -278,6 +278,15 @@ li {
   font-weight: 600;
 }
 
+@media (min-width: 1250px) {
+  .pub-entry {
+    width: max-content;
+    max-width: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 1000px) {
   .container {
     display: block;
