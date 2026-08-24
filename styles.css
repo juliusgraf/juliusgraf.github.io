@@ -1,415 +1,360 @@
-/* ==========================================================================
-   CSS Variables for Theming (UC Berkeley Colors & Modern Typography)
-   ========================================================================== */
 :root {
-  /* UC Berkeley Colors */
   --berkeley-blue: #003262;
-  --california-gold: #FDB515;
-  --founders-rock: #3B7EA1;
-  --medalist: #C4820E;
-
-  /* Grays & Backgrounds */
-  --text-main: #000000;
-  --text-muted: #000000;
-  --bg-main: #faf9f5;
-  --bg-sidebar: #faf9f5;
-  --divider-color: #eaeaea;
-  --link-color: var(--founders-rock);
-  --link-hover: var(--berkeley-blue);
-
-  /* Layout */
+  --text-main: #141413;
+  --text-muted: #4d4c48;
+  --background: #faf9f5;
+  --divider: #e8e6dc;
+  --link: #2f6f8f;
   --sidebar-width: 320px;
   --content-max-width: 800px;
+  font-size: 17px;
 }
 
-/* ==========================================================================
-     Reset & Base Styles
-     ========================================================================== */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
   color: var(--text-main);
-  background-color: var(--bg-main);
+  background: var(--background);
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
   line-height: 1.6;
-  font-size: 17px;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  transition: color 160ms ease;
 }
 
 a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  color: var(--berkeley-blue);
 }
 
-/* ==========================================================================
-     Layout Container
-     ========================================================================== */
+a:focus-visible {
+  border-radius: 2px;
+  outline: 3px solid var(--berkeley-blue);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.65rem 0.9rem;
+  color: #fff;
+  background: var(--berkeley-blue);
+  transform: translateY(-150%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  color: #fff;
+  transform: translateY(0.5rem);
+}
+
 .container {
   display: flex;
   min-height: 100vh;
 }
 
-/* ==========================================================================
-     Left Sidebar (Fixed)
-     ========================================================================== */
 .sidebar {
-  width: var(--sidebar-width);
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-color: var(--bg-sidebar);
-  border-right: 1px solid var(--divider-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 4rem 2rem 2rem 2rem;
-  overflow-y: auto;
+  inset: 0 auto 0 0;
   z-index: 10;
+  display: flex;
+  width: var(--sidebar-width);
+  height: 100vh;
+  padding: 3.5rem 2rem 2rem;
+  overflow-y: auto;
+  background: var(--background);
+  border-right: 1px solid var(--divider);
 }
 
 .profile-container {
-  text-align: center;
   width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.name {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.profile-role {
+  margin: 0.55rem 0 0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.profile-affiliation {
+  margin: 0.05rem 0 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.35;
 }
 
 .profile-image-container {
   width: 180px;
-  height: auto;
-  margin: 0 auto 0 auto;
-  overflow: hidden;
-  border: 0px solid var(--bg-main);
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  margin: 0 auto 0.75rem;
 }
 
 .profile-img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 0.8rem;
-  letter-spacing: -0.5px;
-}
-
-.title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-main);
-  margin-bottom: 0.8rem;
-}
-
-.institution {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
+  height: auto;
 }
 
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
 }
 
 .social-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
+  width: 44px;
+  height: 44px;
   color: var(--text-muted);
-  border-radius: 50%;
   font-size: 1.2rem;
-  transition: all 0.2s ease;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
-.social-icon:hover {
-  color: var(--bg-main);
-  background-color: var(--berkeley-blue);
+.social-icon:hover,
+.social-icon:focus-visible {
+  color: var(--background);
+  background: var(--berkeley-blue);
   text-decoration: none;
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-     Right Content Area
-     ========================================================================== */
 .content {
-  margin-left: var(--sidebar-width);
   flex: 1;
-  padding: 4rem 10%;
-  max-width: calc(var(--content-max-width) + 20%);
+  width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  padding: 3.5rem clamp(2.5rem, 8vw, 8rem);
+}
+
+.content > section,
+.content > footer {
+  width: 100%;
+  max-width: var(--content-max-width);
 }
 
 .section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 h2 {
+  margin: 0 0 0.65rem;
+  color: var(--text-main);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
-.divider {
-  border: 0;
-  height: 1px;
-  background-color: var(--divider-color);
-  margin: 1.5rem 0;
-}
-
-/* Select lists formatting */
 ul,
 ol {
-  margin-left: 1rem;
+  margin: 0 0 1rem 1rem;
+  padding-left: 1.25rem;
   list-style-position: outside;
-  padding-left: 20px;
 }
 
 li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
   padding-left: 0.5rem;
 }
 
 .research-list {
   margin-top: -0.35rem;
-  margin-bottom: 1rem;
 }
 
-/* Format for Education */
-.edu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-.edu-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.edu-details strong {
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-.edu-date {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-/* Format for Teaching */
-.teaching-item {
-  color: var(--text-main);
-}
-
-/* Format for Publications */
-.section-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.pub-title a {
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--berkeley-blue);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.pub-title-text {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.pub-title a:hover {
-  color: #000000;
-}
-
-.pub-title-icon {
-  font-size: 0.85rem;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 0rem;
-  transition: transform 0.2s ease;
-}
-
-.pub-title a:hover .pub-title-icon {
-  transform: translate(3px, -3px);
-}
-
-.pub-authors {
-  margin: 0.2rem 0;
-}
-
-.pub-venue {
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-.pub-links {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 0rem;
-}
-
-.btn-link {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.btn-link:hover {
-  color: var(--california-gold);
-  text-decoration: none;
-}
-
-.btn-arxiv {
-  color: #B31B1B;
-  font-weight: 700;
-}
-
-/* Format for Talks */
-.talk-item {
-  display: flex;
-  flex-direction: column;
-}
-
+.teaching-item,
 .talk-title {
   color: var(--text-main);
 }
 
-.talk-venue,
-.talk-location,
-.talk-date {
-  font-size: 1rem;
-  color: var(--text-muted);
+.pub-title a {
+  color: var(--berkeley-blue);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-/* ==========================================================================
-     Footer / Logos
-     ========================================================================== */
+.pub-title-text {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.pub-title-icon {
+  display: inline-block;
+  margin-left: 0.1rem;
+  font-size: 0.85em;
+  transition: transform 160ms ease;
+}
+
+.pub-title a:hover .pub-title-icon,
+.pub-title a:focus-visible .pub-title-icon {
+  transform: translate(2px, -2px);
+}
+
+.pub-authors {
+  margin-top: 0.15rem;
+}
+
+.pub-meta {
+  margin-top: 0.05rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--divider-color);
-}
-
-.university-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  border-top: 1px solid var(--divider);
 }
 
 .university-history {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 1rem;
-  width: 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 .uni-history-item {
-  text-align: center;
   flex: 1 1 0;
   min-width: 0;
+  text-align: center;
 }
 
 .uni-logo-link {
   display: flex;
-  height: 60px;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  width: 60px;
+  height: 54px;
+  margin: 0 auto 0.65rem;
+  text-decoration: none;
 }
 
 .uni-logo {
-  max-height: 50px;
-  max-width: 100%;
-  object-fit: contain;
-  filter: grayscale(20%);
   display: block;
+  max-width: 60px;
+  max-height: 50px;
+  object-fit: contain;
 }
 
-.copyright {
-  text-align: center;
-  font-size: 0.85rem;
+.uni-history-text {
   color: var(--text-muted);
-}
-
-.credit {
-  margin-top: 0.5rem;
   font-size: 0.8rem;
+  line-height: 1.35;
 }
 
-/* ==========================================================================
-     Responsive Design (Mobile Devices)
-     ========================================================================== */
-@media (max-width: 850px) {
+.uni-history-text strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
   .container {
-    flex-direction: column;
+    display: block;
   }
 
   .sidebar {
-    width: 100%;
     position: relative;
+    inset: auto;
+    width: 100%;
     height: auto;
-    min-height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--divider-color);
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.25rem 1.5rem;
+    overflow: visible;
+    border-right: 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .profile-container {
+    max-width: 420px;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .profile-image-container {
+    width: 150px;
   }
 
   .content {
+    width: 100%;
     margin-left: 0;
-    padding: 2.5rem 1.5rem;
-    max-width: 100%;
+    padding: 2rem 1.25rem 2.5rem;
   }
 
-  .edu-item {
-    flex-direction: column;
+  .content > section,
+  .content > footer {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 16.5px;
   }
 
-  .edu-date {
-    margin-top: 0.2rem;
+  .sidebar {
+    padding-top: 1.5rem;
+  }
+
+  .university-history {
+    gap: 0.5rem;
+  }
+
+  .uni-logo-link {
+    width: 52px;
+  }
+
+  .uni-logo {
+    max-width: 52px;
+    max-height: 44px;
   }
 
   .uni-history-text {
-    font-size: 0.75rem !important;
-    word-break: break-word;
-    line-height: 1.2;
+    font-size: 0.72rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,

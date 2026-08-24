@@ -8,7 +8,18 @@
 
   <title>Julius Graf</title>
   <meta name="description"
-    content="Personal academic website of Julius Graf, PhD Student in Industrial Engineering and Operations Research (IEOR) at UC Berkeley." />
+    content="Academic website of Julius Graf, a Ph.D. student in Industrial Engineering and Operations Research at UC Berkeley researching financial mathematics, stochastic control, and reinforcement learning." />
+  <link rel="canonical" href="https://juliusgraf.github.io/" />
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <meta name="theme-color" content="#faf9f5" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Julius Graf" />
+  <meta property="og:description"
+    content="Ph.D. student in IEOR at UC Berkeley researching financial mathematics, stochastic control, and reinforcement learning." />
+  <meta property="og:url" content="https://juliusgraf.github.io/" />
+  <meta property="og:image" content="https://juliusgraf.github.io/images/IMG_3444.jpeg" />
+  <meta name="twitter:card" content="summary" />
 
   <!-- Google Fonts: Source Sans Pro, matching the reference site -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,53 +28,58 @@
     rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 
-  <!-- FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Fallback icons if kit fails -->
+  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <div class="container">
 
     <!-- Left Sidebar (Fixed) -->
     <aside class="sidebar">
       <div class="profile-container">
         <h1 class="name">Julius Graf</h1>
+        <p class="profile-role">Ph.D. Student in IEOR</p>
+        <p class="profile-affiliation">UC Berkeley</p>
         <div class="profile-image-container">
-          <img src="./images/IMG_3444.jpeg" alt="Julius Graf" class="profile-img" />
+          <img src="./images/IMG_3444.jpeg" alt="Portrait of Julius Graf" class="profile-img" width="481"
+            height="720" decoding="async" />
         </div>
 
         <div class="social-links">
-          <a href="https://scholar.google.com/citations?user=ZHchrTUAAAAJ&amp;hl=de&amp;authuser=1"
-            target="https://scholar.google.com/citations?user=ZHchrTUAAAAJ&amp;hl=de&amp;authuser=1" title="Google Scholar"
-            class="social-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+          <a href="https://scholar.google.com/citations?user=ZHchrTUAAAAJ" target="_blank"
+            rel="noopener noreferrer" aria-label="Google Scholar profile" title="Google Scholar" class="social-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              aria-hidden="true" focusable="false">
               <path
                 d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/julius-graf" target="https://www.linkedin.com/in/julius-graf"
-            title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/juliusgraf" target="https://github.com/juliusgraf" title="GitHub"
-            class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/julius-graf" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn profile" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"
+              aria-hidden="true"></i></a>
+          <a href="https://github.com/juliusgraf" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub profile" title="GitHub" class="social-icon"><i class="fab fa-github"
+              aria-hidden="true"></i></a>
+          <!-- Add a CV link here once a PDF or public URL is available. -->
         </div>
       </div>
     </aside>
 
     <!-- Right Content Area (Scrollable) -->
-    <main class="content">
+    <main id="main-content" class="content" tabindex="-1">
 
       <!-- About Section -->
       <section id="about" class="section">
         <p>
-          I am a Ph.D. student in the department of Industrial
-          Engineering and Operations Research at the University of California, Berkeley, where I am being
-          advised by <a href="https://mastrolia.ieor.berkeley.edu" target="_blank">Thibaut Mastrolia</a>. Prior to
-          joining the Ph.D. program, I earned a Master of Engineering degree in IEOR at UC Berkeley. I hold a Master of
-          Science in Engineering (Diplôme d'Ingénieur) from CentraleSupélec.
+          I am a Ph.D. student in the Department of Industrial Engineering and Operations Research at UC Berkeley,
+          advised by <a href="https://mastrolia.ieor.berkeley.edu" target="_blank"
+            rel="noopener noreferrer">Thibaut Mastrolia</a>. Before beginning the Ph.D., I earned an M.Eng. in IEOR
+          from UC Berkeley and a Diplôme d'Ingénieur from CentraleSupélec.
         </p>
         <p>
           My research interests include financial mathematics, stochastic optimal control, and reinforcement learning.
@@ -74,7 +90,7 @@
           <li>Computational and learning-based approaches to Hawkes-process models of market order flow</li>
         </ul>
         <p>
-          E-mail: julius (dot) graf (at) berkeley (dot) edu
+          E-mail: <a href="mailto:julius.graf@berkeley.edu">julius.graf@berkeley.edu</a>
         </p>
       </section>
 
@@ -97,11 +113,16 @@
         <ol class="pub-list">
           <li>
             <div class="pub-title">
-              <a href="https://arxiv.org/abs/2601.17247" target="_blank">
+              <a href="https://arxiv.org/abs/2601.17247" target="_blank" rel="noopener noreferrer">
                 <span class="pub-title-text">Learning Market Making with Closing Auctions</span>
-                <span class="pub-title-icon">&#8599;</span>
-              </a> (with Thibaut Mastrolia)
+                <span class="pub-title-icon" aria-hidden="true">&#8599;</span>
+              </a>
             </div>
+            <div class="pub-authors">with <a href="https://mastrolia.ieor.berkeley.edu" target="_blank"
+                rel="noopener noreferrer">Thibaut Mastrolia</a></div>
+            <div class="pub-meta">Preprint, submitted for publication, 2026 · <a
+                href="https://arxiv.org/abs/2601.17247" target="_blank"
+                rel="noopener noreferrer">arXiv:2601.17247</a></div>
           </li>
         </ol>
       </section>
@@ -109,7 +130,13 @@
       <!-- Talks and Presentations Section -->
       <section id="talks" class="section">
         <h2>Talks and Presentations</h2>
-        <ol class="talks-list">
+        <ul class="talks-list">
+          <li>
+            <div class="talk-item">
+              <div class="talk-title">Workshop on "Stochastic Control and Reinforcement Learning", CIRM,
+                Marseille, France (July 2026)</div>
+            </div>
+          </li>
           <li>
             <div class="talk-item">
               <div class="talk-title">Minisymposium on "Advances in Market Microstructure, Market Making, and
@@ -117,21 +144,17 @@
                 2026)</div>
             </div>
           </li>
-          <li>
-            <div class="talk-item">
-              <div class="talk-title">Workshop on "Stochastic Control and Reinforcement Learning", CIRM,
-                Marseille, France (July 2026)</div>
-            </div>
-          </li>
-        </ol>
+        </ul>
       </section>
 
       <!-- Footer with University Logos and Education History -->
       <footer class="footer">
         <div class="university-history">
           <div class="uni-history-item">
-            <a href="https://maps.app.goo.gl/qCLfK6YhYLfqpoM39" target="_blank" class="uni-logo-link">
-              <img src="./images/UC-Berkeley-Symbol.png" alt="UC Berkeley Logo" class="uni-logo" />
+            <a href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer" class="uni-logo-link"
+              aria-label="Visit the UC Berkeley website">
+              <img src="./images/UC-Berkeley-Symbol.png" alt="UC Berkeley logo" class="uni-logo" loading="lazy"
+                decoding="async" />
             </a>
             <div class="uni-history-text">
               <strong>UC Berkeley</strong><br>
@@ -139,8 +162,10 @@
             </div>
           </div>
           <div class="uni-history-item">
-            <a href="https://maps.app.goo.gl/VuMbzobcz3PLaGpW9" target="_blank" class="uni-logo-link">
-              <img src="./images/LogoCS-4.png" alt="CentraleSupelec Logo" class="uni-logo" />
+            <a href="https://www.centralesupelec.fr/" target="_blank" rel="noopener noreferrer"
+              class="uni-logo-link" aria-label="Visit the CentraleSupélec website">
+              <img src="./images/LogoCS-4.png" alt="CentraleSupélec logo" class="uni-logo" loading="lazy"
+                decoding="async" />
             </a>
             <div class="uni-history-text">
               <strong>CentraleSupélec</strong><br>
@@ -148,8 +173,10 @@
             </div>
           </div>
           <div class="uni-history-item">
-            <a href="https://maps.app.goo.gl/RUV1Csntrr6pzJkB9" target="_blank" class="uni-logo-link">
-              <img src="./images/LouisLeGrand.png" alt="Lycee Louis-le-Grand Logo" class="uni-logo" />
+            <a href="https://louislegrand.fr/" target="_blank" rel="noopener noreferrer" class="uni-logo-link"
+              aria-label="Visit the Lycée Louis-le-Grand website">
+              <img src="./images/LouisLeGrand.png" alt="Lycée Louis-le-Grand logo" class="uni-logo" loading="lazy"
+                decoding="async" />
             </a>
             <div class="uni-history-text">
               <strong>Lycée Louis-le-Grand</strong><br>
