@@ -191,9 +191,19 @@ li {
 }
 
 ol.pub-list,
-ol.teaching-list,
+ul.teaching-list,
 ol.talks-list {
   list-style-position: outside;
+}
+
+.research-list {
+  margin-top: -0.35rem;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+}
+
+.teaching-list {
+  padding-left: 20px;
 }
 
 /* Format for Education */
@@ -223,11 +233,6 @@ ol.talks-list {
 /* Format for Teaching */
 .teaching-item {
   color: var(--text-main);
-}
-
-.teaching-role {
-  color: var(--text-muted);
-  margin-bottom: 0.15rem;
 }
 
 /* Format for Publications */
