@@ -183,6 +183,8 @@ p {
 ul,
 ol {
   margin-left: 1rem;
+  list-style-position: outside;
+  padding-left: 20px;
 }
 
 li {
@@ -190,20 +192,9 @@ li {
   padding-left: 0.5rem;
 }
 
-ol.pub-list,
-ul.teaching-list,
-ol.talks-list {
-  list-style-position: outside;
-}
-
 .research-list {
   margin-top: -0.35rem;
   margin-bottom: 1rem;
-  padding-left: 20px;
-}
-
-.teaching-list {
-  padding-left: 20px;
 }
 
 /* Format for Education */
