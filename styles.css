@@ -32,7 +32,7 @@
 }
 
 body {
-  font-family: "Freight Sans Pro", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--text-main);
   background-color: var(--bg-main);
   line-height: 1.6;
@@ -74,11 +74,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* Align content to the top */
   padding: 4rem 2rem 2rem 2rem;
-  /* Top padding to match right side spacing (4rem) */
   overflow-y: auto;
-  /* In case screens are very short */
   z-index: 10;
 }
 
@@ -157,7 +154,6 @@ a:hover {
   margin-left: var(--sidebar-width);
   flex: 1;
   padding: 4rem 10%;
-  /* Responsive padding */
   max-width: calc(var(--content-max-width) + 20%);
 }
 
@@ -195,6 +191,7 @@ li {
 }
 
 ol.pub-list,
+ol.teaching-list,
 ol.talks-list {
   list-style-position: outside;
 }
@@ -205,7 +202,6 @@ ol.talks-list {
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  /* handles small screens inside this block */
 }
 
 .edu-details {
@@ -222,6 +218,11 @@ ol.talks-list {
   color: var(--text-muted);
   font-size: 0.95rem;
   white-space: nowrap;
+}
+
+/* Format for Teaching */
+.teaching-item {
+  color: var(--text-main);
 }
 
 /* Format for Publications */
@@ -249,8 +250,6 @@ ol.talks-list {
   color: #000000;
 }
 
-
-
 .pub-title-icon {
   font-size: 0.85rem;
   font-weight: bold;
@@ -261,7 +260,6 @@ ol.talks-list {
 
 .pub-title a:hover .pub-title-icon {
   transform: translate(3px, -3px);
-
 }
 
 .pub-authors {
@@ -337,7 +335,6 @@ ol.talks-list {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* Align tops instead of vertical center */
   gap: 1rem;
   width: 100%;
   flex-wrap: nowrap;
@@ -347,24 +344,19 @@ ol.talks-list {
 .uni-history-item {
   text-align: center;
   flex: 1 1 0;
-  /* Ensures they all take exactly equal space */
   min-width: 0;
-  /* Prevents flex items from overflowing their container */
 }
 
 .uni-logo-link {
   display: flex;
   height: 60px;
-  /* Enforces equal bounding box for all variable sized logos */
   align-items: flex-end;
-  /* Sit on a bottom baseline */
   justify-content: center;
   margin-bottom: 0.5rem;
 }
 
 .uni-logo {
   max-height: 50px;
-  /* slightly smaller max-height for mobile safety */
   max-width: 100%;
   object-fit: contain;
   filter: grayscale(20%);
@@ -393,10 +385,8 @@ ol.talks-list {
   .sidebar {
     width: 100%;
     position: relative;
-    /* Static position on mobile */
     height: auto;
     min-height: auto;
-    /* removed vh unit min height */
     border-right: none;
     border-bottom: 1px solid var(--divider-color);
     padding: 3rem 1.5rem;
