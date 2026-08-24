@@ -11,8 +11,8 @@
   /* Grays & Backgrounds */
   --text-main: #000000;
   --text-muted: #000000;
-  --bg-main: #f8f9fa;
-  --bg-sidebar: #f8f9fa;
+  --bg-main: #faf9f5;
+  --bg-sidebar: #faf9f5;
   --divider-color: #eaeaea;
   --link-color: var(--founders-rock);
   --link-hover: var(--berkeley-blue);
@@ -36,7 +36,7 @@ body {
   color: var(--text-main);
   background-color: var(--bg-main);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -223,6 +223,11 @@ ol.talks-list {
 /* Format for Teaching */
 .teaching-item {
   color: var(--text-main);
+}
+
+.teaching-role {
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
 }
 
 /* Format for Publications */
