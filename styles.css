@@ -152,6 +152,28 @@ a:focus-visible {
   height: 22px;
 }
 
+.cv-page {
+  fill: currentColor;
+}
+
+.cv-fold {
+  stroke: var(--background);
+}
+
+.cv-label {
+  fill: var(--background);
+}
+
+.social-icon:hover .cv-fold,
+.social-icon:focus-visible .cv-fold {
+  stroke: var(--berkeley-blue);
+}
+
+.social-icon:hover .cv-label,
+.social-icon:focus-visible .cv-label {
+  fill: var(--berkeley-blue);
+}
+
 .content {
   flex: 1;
   width: calc(100% - var(--sidebar-width));
