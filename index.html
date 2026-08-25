@@ -28,7 +28,7 @@
     rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
 
   <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,9 +37,11 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  <canvas class="pattern-background" aria-hidden="true"></canvas>
+
   <div class="container">
 
-    <!-- Left Sidebar (Fixed) -->
+    <!-- Profile column, stacked above the main content -->
     <aside class="sidebar">
       <div class="profile-container">
         <h1 class="name">Julius Graf</h1>
@@ -214,6 +216,8 @@
 
     </main>
   </div>
+
+  <script src="./background-pattern.js" defer></script>
 </body>
 
 </html>
