@@ -216,11 +216,6 @@ li {
   color: var(--text-main);
 }
 
-.teaching-history-intro {
-  margin-top: 0;
-  padding-top: 1.5rem;
-}
-
 .pub-entry {
   margin-bottom: 0;
 }
