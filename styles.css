@@ -146,6 +146,12 @@ a:focus-visible {
   transform: translateY(-2px);
 }
 
+.cv-document-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
 .content {
   flex: 1;
   width: calc(100% - var(--sidebar-width));
@@ -274,20 +280,6 @@ li {
 .uni-history-text strong {
   color: var(--text-main);
   font-weight: 600;
-}
-
-@media (min-width: 1250px) {
-  .pub-list {
-    width: max-content;
-    margin-left: -1rem;
-  }
-
-  .pub-entry {
-    width: max-content;
-    max-width: none;
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
 }
 
 @media (max-width: 1000px) {
