@@ -102,7 +102,7 @@ a:focus-visible {
   margin: 0.55rem 0 1.1rem;
   color: var(--text-main);
   font-size: 0.98rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.35;
   white-space: nowrap;
 }
@@ -136,12 +136,6 @@ a:focus-visible {
   text-decoration: none;
   border-radius: 50%;
   transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
-}
-
-.cv-link {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .social-icon:hover,
@@ -204,6 +198,10 @@ li {
 }
 
 .pub-entry {
+  margin-bottom: 0;
+}
+
+.pub-list {
   margin-bottom: 0;
 }
 
@@ -279,6 +277,11 @@ li {
 }
 
 @media (min-width: 1250px) {
+  .pub-list {
+    width: max-content;
+    margin-left: -1rem;
+  }
+
   .pub-entry {
     width: max-content;
     max-width: none;
