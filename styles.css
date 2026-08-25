@@ -289,10 +289,12 @@ li {
 
 @media (max-width: 1000px) {
   .container {
-    display: block;
+    flex-direction: column;
+    width: 100%;
   }
 
   .sidebar {
+    flex: 0 0 auto;
     position: relative;
     inset: auto;
     width: 100%;
@@ -316,6 +318,8 @@ li {
   }
 
   .content {
+    flex: 0 0 auto;
+    min-width: 0;
     width: 100%;
     margin-left: 0;
     padding: 2rem 1.25rem 2.5rem;
