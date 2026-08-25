@@ -148,7 +148,7 @@ a:focus-visible {
 
 .cv-document-icon {
   display: block;
-  width: 22px;
+  width: 18px;
   height: 22px;
 }
 
@@ -156,17 +156,8 @@ a:focus-visible {
   fill: currentColor;
 }
 
-.cv-fold {
-  stroke: var(--background);
-}
-
 .cv-label {
   fill: var(--background);
-}
-
-.social-icon:hover .cv-fold,
-.social-icon:focus-visible .cv-fold {
-  stroke: var(--berkeley-blue);
 }
 
 .social-icon:hover .cv-label,
